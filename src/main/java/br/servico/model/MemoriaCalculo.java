@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class MemoriaCalculo {
 	private double salarioLiquido;
 	
+	public MemoriaCalculo(double salarioLiquido) {
+		this.salarioLiquido = salarioLiquido;
+		this.items = new ArrayList<MemoriaCalculoItem>();
+	}
+	
 	private ArrayList<MemoriaCalculoItem> items;
 
 	public double getSalarioLiquido() {
@@ -19,7 +24,7 @@ public class MemoriaCalculo {
 		return items;
 	}
 
-	public void setItems(ArrayList<MemoriaCalculoItem> items) {
-		this.items = items;
+	public void setItem(MemoriaCalculoItem item) {
+		this.items.add(item);
 	}
 }

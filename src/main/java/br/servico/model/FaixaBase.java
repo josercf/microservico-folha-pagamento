@@ -5,6 +5,7 @@ public abstract class FaixaBase {
 	private double inicioFaixa;
 	private double fimFaixa;
 	private float aliquota;
+	
 	public double getFimFaixa() {
 		return fimFaixa;
 	}

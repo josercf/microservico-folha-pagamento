@@ -4,6 +4,18 @@ public class MemoriaCalculoItem {
 	private String nome;
 	private float aliquota;
 	private double valor;
+	
+
+	public MemoriaCalculoItem(String nome, float aliquota) {
+		this(nome, aliquota, 0);
+	}
+	
+	public MemoriaCalculoItem(String nome, float aliquota, double valor) {
+		super();
+		this.nome = nome;
+		this.aliquota = aliquota;
+		this.valor = valor;
+	}
 
 	public String getNome() {
 		return nome;
