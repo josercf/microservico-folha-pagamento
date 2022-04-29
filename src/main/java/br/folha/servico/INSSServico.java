@@ -140,7 +140,7 @@ public class INSSServico implements IINSSServico {
 		
 		FaixaINSSModel faixa = EncontrarFaixaV3(salarioBruto);
 		
-		MemoriaCalculoItem item = new MemoriaCalculoItem("INSS", faixa.getAliquota());
+		MemoriaCalculoItem item = new MemoriaCalculoItem("INSS", (float)faixa.getAliquota());
 	
 		item.setValor(faixa.obterValorDesconto(salarioBruto));
 		

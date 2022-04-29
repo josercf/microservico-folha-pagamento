@@ -1,29 +1,20 @@
 package br.servico.model;
 
 public final class FaixaINSSModel extends FaixaBase {
-	
 	public final double TETO_DESCONTO = 828.38;
 	
-	public FaixaINSSModel(double inicioFaixa,
-						  double fimFaixa,
-						  float   aliquota)
-	{
-		super.setInicioFaixa(inicioFaixa);
-		super.setFimFaixa(fimFaixa);
-		super.setAliquota(aliquota);		
-	}	
-	
-	public boolean contemValor(double valor)
-	{		
-		return valor > this.getInicioFaixa() && 
-			   valor <= this.getFimFaixa();
+	public FaixaINSSModel(double inicioFaixa, double fimFaixa, double aliquota) {
+		super(inicioFaixa, fimFaixa, aliquota);
 	}
-	
-	public double obterValorDesconto(double salarioBruto) {
+
+	@Override
+	public double obterValorDesconto(double valor) {
 		
-		return getAliquota() == 0 ?
+		return super.getAliquota() == 0 ?
 			   TETO_DESCONTO :
-			   salarioBruto * getAliquota();
+				   valor * super.getAliquota();
 		
 	}
+	
+	
 }

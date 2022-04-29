@@ -2,7 +2,7 @@ package br.servico.model;
 
 public class MemoriaCalculoItem {
 	private String nome;
-	private float aliquota;
+	private double aliquota;
 	private double valor;
 	
 
@@ -10,7 +10,7 @@ public class MemoriaCalculoItem {
 		this(nome, aliquota, 0);
 	}
 	
-	public MemoriaCalculoItem(String nome, float aliquota, double valor) {
+	public MemoriaCalculoItem(String nome, double aliquota, double valor) {
 		super();
 		this.nome = nome;
 		this.aliquota = aliquota;
@@ -25,11 +25,11 @@ public class MemoriaCalculoItem {
 		this.nome = nome;
 	}
 
-	public float getAliquota() {
+	public double getAliquota() {
 		return aliquota;
 	}
 
-	public void setAliquota(float aliquota) {
+	public void setAliquota(double aliquota) {
 		this.aliquota = aliquota;
 	}
 

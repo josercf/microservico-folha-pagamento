@@ -10,6 +10,17 @@ public class FolhaPagamentoServico implements IFolhaPagamentoServico {
 	
 	final double VALOR_DEDUCAO_DEPENDENTE = 189.59; 
 	
+	public FolhaPagamentoServico(IINSSServico inssServico, IIRRFServico irrfServico) {
+		this.inssServico = inssServico;
+		this.irrfServico = irrfServico;
+	}
+
+	
+
+
+	
+	
+	
 	@Override
 	public MemoriaCalculo calcularFolhaPagamento(double salarioBruto, int dependentes) {
 		MemoriaCalculoItem inss = inssServico.calcularDescontoV3(salarioBruto);

@@ -4,12 +4,23 @@ public abstract class FaixaBase {
 
 	private double inicioFaixa;
 	private double fimFaixa;
-	private float aliquota;
+	private double aliquota;
+	
+	public FaixaBase(double inicioFaixa,
+			  double fimFaixa,
+			  double   aliquota)		{
+		this.setInicioFaixa(inicioFaixa);
+		this.setFimFaixa(fimFaixa);
+		this.setAliquota(aliquota);
+		}	
+	
+	
+	abstract double obterValorDesconto(double valor);
 	
 	public double getFimFaixa() {
 		return fimFaixa;
 	}
-	public void setFimFaixa(double fimFaixa) {
+	private void setFimFaixa(double fimFaixa) {
 		this.fimFaixa = fimFaixa;
 	}
 	public double getInicioFaixa() {
@@ -18,10 +29,16 @@ public abstract class FaixaBase {
 	public void setInicioFaixa(double inicioFaixa) {
 		this.inicioFaixa = inicioFaixa;
 	}
-	public float getAliquota() {
+	public double getAliquota() {
 		return aliquota;
 	}
-	public void setAliquota(float aliquota) {
+	private void setAliquota(double aliquota) {
 		this.aliquota = aliquota;
+	}
+	
+	public boolean contemValor(double valor)
+	{		
+		return valor > this.getInicioFaixa() && 
+			   valor <= this.getFimFaixa();
 	}
 }
