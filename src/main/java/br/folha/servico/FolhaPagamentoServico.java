@@ -14,12 +14,6 @@ public class FolhaPagamentoServico implements IFolhaPagamentoServico {
 		this.inssServico = inssServico;
 		this.irrfServico = irrfServico;
 	}
-
-	
-
-
-	
-	
 	
 	@Override
 	public MemoriaCalculo calcularFolhaPagamento(double salarioBruto, int dependentes) {
